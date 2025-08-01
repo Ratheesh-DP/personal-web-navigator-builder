@@ -122,29 +122,42 @@ const Index = () => {
 
   const experience = [
     {
-      role: "AI/ML Research Intern",
-      company: "TechCorp Solutions",
-      period: "Summer 2024",
+      role: "Machine Learning Engineer Intern",
+      company: "Tech Innovation Labs",
+      period: "Jun 2024 - Aug 2024",
       location: "Remote",
       type: "Internship",
-      description: "Developed machine learning models for predictive analytics, improving accuracy by 23%.",
+      description: "Developed and deployed ML models for predictive analytics, contributing to a 25% improvement in model accuracy.",
       achievements: [
-        "Improved model accuracy by 23% using ensemble methods",
-        "Reduced training time by 40% through optimization",
-        "Published research paper on novel ML techniques"
+        "Built recommendation systems using collaborative filtering",
+        "Implemented computer vision models for object detection",
+        "Optimized model performance reducing inference time by 35%"
       ]
     },
     {
-      role: "Python Developer",
-      company: "StartupX",
-      period: "Jan 2024 - May 2024", 
-      location: "Bangalore, India",
-      type: "Part-time",
-      description: "Built backend systems and APIs for web applications serving 50K+ users.",
+      role: "Python Developer Intern",
+      company: "Digital Solutions Corp",
+      period: "Dec 2023 - May 2024", 
+      location: "Coimbatore, India",
+      type: "Internship",
+      description: "Developed web applications and APIs using Python frameworks, serving 10K+ active users.",
       achievements: [
-        "Developed scalable APIs handling 1M+ requests/day",
-        "Implemented caching reducing response time by 60%",
-        "Mentored 3 junior developers in Python best practices"
+        "Built scalable Flask applications with RESTful APIs",
+        "Implemented data processing pipelines using Pandas",
+        "Created automated testing suites improving code quality"
+      ]
+    },
+    {
+      role: "AI Research Assistant",
+      company: "Sri Shakthi Institute of Engineering",
+      period: "Jan 2024 - Present",
+      location: "Coimbatore, India", 
+      type: "Research",
+      description: "Conducting research on deep learning applications in computer vision and NLP.",
+      achievements: [
+        "Published research on novel CNN architectures",
+        "Developed sentiment analysis models with 92% accuracy",
+        "Mentored junior students in ML projects"
       ]
     }
   ];
@@ -153,48 +166,82 @@ const Index = () => {
     {
       degree: "B.Tech in Artificial Intelligence and Data Science",
       institution: "Sri Shakthi Institute of Engineering and Technology",
-      period: "2022 - 2026",
-      gpa: "8.7/10",
-      status: "Current Student",
+      period: "2023 - 2027",
+      gpa: "8.5/10",
+      status: "3rd Year Student",
       coursework: [
         "Machine Learning & Deep Learning",
-        "Data Structures & Algorithms", 
-        "Computer Vision & NLP",
-        "Statistics & Probability",
+        "Computer Vision & Image Processing", 
+        "Natural Language Processing",
+        "Data Structures & Algorithms",
+        "Statistics & Probability Theory",
         "Database Management Systems",
-        "Software Engineering"
+        "Software Engineering & Design Patterns",
+        "Neural Networks & AI Ethics"
+      ],
+      projects: [
+        "Final Year Project: Advanced Computer Vision System",
+        "Research: Deep Learning for Medical Image Analysis",
+        "Capstone: AI-Powered Smart Agriculture System"
+      ]
+    },
+    {
+      degree: "Higher Secondary Education (XII)",
+      institution: "Government Higher Secondary School",
+      period: "2021 - 2023",
+      gpa: "92%",
+      status: "Completed",
+      coursework: [
+        "Mathematics",
+        "Physics", 
+        "Chemistry",
+        "Computer Science"
       ]
     }
   ];
 
   const achievements = [
     {
-      title: "Kaggle Competition Winner",
-      organization: "Kaggle",
+      title: "Smart India Hackathon Finalist",
+      organization: "Government of India",
       date: "2024",
-      description: "1st place in ML prediction challenge with 97.2% accuracy",
+      description: "Selected among top 10 teams nationwide for AI-based solution",
       icon: "🏆"
     },
     {
-      title: "Google AI/ML Certification", 
-      organization: "Google",
+      title: "Python Programming Certification", 
+      organization: "HackerRank",
       date: "2024",
-      description: "Completed professional ML engineering certification",
+      description: "5-star rating in Python with top 5% performance",
       icon: "🎓"
     },
     {
-      title: "Research Publication",
-      organization: "IEEE",
+      title: "Machine Learning Specialization",
+      organization: "Coursera (Stanford)",
       date: "2024", 
-      description: "Published paper on novel deep learning architectures",
+      description: "Completed Andrew Ng's ML course with 98% score",
       icon: "📄"
     },
     {
-      title: "Hackathon Champion",
-      organization: "TechFest 2024",
+      title: "College Technical Symposium Winner",
+      organization: "Sri Shakthi Institute",
       date: "2024",
-      description: "Won AI/ML track with innovative healthcare solution",
+      description: "1st place in AI/ML project competition",
       icon: "🚀"
+    },
+    {
+      title: "Open Source Contributor",
+      organization: "GitHub",
+      date: "2023-Present",
+      description: "Contributing to ML libraries and frameworks",
+      icon: "💻"
+    },
+    {
+      title: "Dean's List Recognition",
+      organization: "Sri Shakthi Institute",
+      date: "2023-2024",
+      description: "Academic excellence recognition for consecutive semesters",
+      icon: "⭐"
     }
   ];
 
