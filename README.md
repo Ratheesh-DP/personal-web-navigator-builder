@@ -48,3 +48,4 @@ Other Tools: Postman, Figma, Replit, Netlify
 
 I'm a passionate developer with a strong foundation in building dynamic web applications. I enjoy creating clean and efficient code and continuously improving my skills. Whether it’s crafting responsive interfaces or working behind the scenes on APIs and servers, I bring attention to detail and a love for problem-solving to everything I build.
 
+https://personal-web-navigator-builder.lovable.app
