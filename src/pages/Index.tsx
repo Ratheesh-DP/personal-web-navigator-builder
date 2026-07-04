@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import heroImage from "@/assets/hero-space.jpg";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -335,63 +336,94 @@ const Index = () => {
 
       {/* Hero Section */}
       {activeSection === "home" && (
-        <section className="min-h-screen flex items-center justify-center bg-gradient-nebula pt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="mb-8">
-              <Badge variant="secondary" className="mb-4 animate-pulse">
-                <Star className="w-4 h-4 mr-2" />
-                Available for FAANG Opportunities
-              </Badge>
-              
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                <span className="bg-gradient-cosmic bg-clip-text text-transparent">
-                  Ratheesh D P
-                </span>
+        <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+          {/* Cinematic background image */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src={heroImage}
+              alt="Cosmic AI neural network landscape"
+              className="w-full h-full object-cover object-center"
+              width={1920}
+              height={1088}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
+          </div>
+
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div className="max-w-3xl">
+              {/* Tag chips */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                <Badge variant="outline" className="border-primary/40 bg-background/50 backdrop-blur-sm px-3 py-1">
+                  <Star className="w-3 h-3 mr-1.5 text-primary" />
+                  AI portfolio online
+                </Badge>
+                <Badge variant="outline" className="border-primary/40 bg-background/50 backdrop-blur-sm px-3 py-1">
+                  Resume ready
+                </Badge>
+              </div>
+
+              {/* Category line */}
+              <p className="text-sm md:text-base font-mono text-primary tracking-widest mb-6 uppercase">
+                Machine Learning <span className="text-muted-foreground">/</span> Deep Learning <span className="text-muted-foreground">/</span> Data Science
+              </p>
+
+              {/* Massive name */}
+              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-8 leading-[0.95] tracking-tight">
+                <span className="block text-foreground">Ratheesh</span>
+                <span className="block bg-gradient-cosmic bg-clip-text text-transparent">D P</span>
               </h1>
-              
-              <div className="h-16 flex items-center justify-center">
-                <p className="text-2xl md:text-4xl text-muted-foreground">
-                  {typedText}
-                  <span className="animate-pulse">|</span>
+
+              {/* Rotating role */}
+              <div className="h-10 mb-6">
+                <p className="text-xl md:text-2xl text-primary font-mono">
+                  &gt; {typedText}
+                  <span className="animate-pulse">_</span>
                 </p>
               </div>
-              
-              <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-4xl mx-auto leading-relaxed">
+
+              <p className="text-lg md:text-xl text-foreground/80 mb-10 max-w-2xl leading-relaxed">
+                I build intelligent systems with the discipline of a machine learning engineer
+                and the curiosity of a data scientist — turning complex data into real-world impact.
+              </p>
+
+              {/* CTAs */}
+              <div className="flex flex-wrap gap-4 mb-12">
+                <Button size="lg" className="bg-gradient-cosmic hover:opacity-90 transition-opacity rounded-full px-8" onClick={() => scrollToSection("projects")}>
+                  View Projects
+                  <Rocket className="w-4 h-4 ml-2" />
+                </Button>
+                <Button variant="outline" size="lg" className="rounded-full px-8 bg-background/50 backdrop-blur-sm">
+                  <Download className="w-4 h-4 mr-2" />
+                  Resume
+                </Button>
+                <Button variant="outline" size="lg" className="rounded-full px-8 bg-background/50 backdrop-blur-sm" asChild>
+                  <a href="https://github.com/Ratheesh-DP" target="_blank" rel="noopener noreferrer">
+                    <Github className="w-4 h-4 mr-2" />
+                    GitHub
+                  </a>
+                </Button>
+              </div>
+
+              {/* Hidden legacy content preserved semantically */}
+              <p className="sr-only">
                 Building the future with AI and Machine Learning. Passionate about creating intelligent solutions 
                 that solve real-world problems and drive innovation in technology.
               </p>
 
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-2xl mx-auto">
+              {/* Stats strip */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl">
                 {stats.map((stat, index) => (
-                  <Card key={index} className="border-primary/20 bg-card/50 backdrop-blur-sm">
-                    <CardContent className="p-4 text-center">
-                      <div className="text-2xl mb-2">{stat.icon}</div>
-                      <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                      <div className="text-sm text-muted-foreground">{stat.label}</div>
-                    </CardContent>
-                  </Card>
+                  <div key={index} className="border-l-2 border-primary/50 pl-3 bg-background/30 backdrop-blur-sm rounded-r py-2">
+                    <div className="text-2xl font-bold text-foreground">{stat.value}</div>
+                    <div className="text-xs text-muted-foreground">{stat.label}</div>
+                  </div>
                 ))}
-              </div>
-
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg" className="bg-gradient-cosmic hover:opacity-90 transition-opacity">
-                  <Download className="w-5 h-5 mr-2" />
-                  Download Resume
-                </Button>
-                <Button variant="outline" size="lg" onClick={() => scrollToSection("projects")}>
-                  <Rocket className="w-5 h-5 mr-2" />
-                  View Projects
-                </Button>
-                <Button variant="outline" size="lg" onClick={() => scrollToSection("contact")}>
-                  <Mail className="w-5 h-5 mr-2" />
-                  Get In Touch
-                </Button>
               </div>
             </div>
           </div>
-          
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
             <ChevronDown className="w-8 h-8 text-muted-foreground" />
           </div>
         </section>
