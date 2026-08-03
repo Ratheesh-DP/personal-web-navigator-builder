@@ -398,26 +398,27 @@ const Index = () => {
               <CardHeader className="text-center">
                 <CardTitle className="text-4xl mb-4">About Me</CardTitle>
                 <p className="text-xl text-muted-foreground">
-                  Transforming ideas into intelligent solutions
+                  Engineering data into intelligent, production-ready systems
                 </p>
               </CardHeader>
               <CardContent className="space-y-8">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div className="space-y-6">
                     <p className="text-lg leading-relaxed">
-                      I'm a passionate B.Tech student specializing in Artificial Intelligence and Data Science, 
-                      with a deep fascination for machine learning and its transformative potential. My journey 
-                      began with curiosity about how machines can learn and make decisions, and has evolved into 
-                      a mission to build intelligent systems that solve complex real-world problems.
+                      I'm an aspiring Data Scientist and Software Developer pursuing a B.Tech in Artificial
+                      Intelligence &amp; Data Science at Sri Shakthi Institute of Engineering and Technology,
+                      Coimbatore, with a CGPA of 8.33 and a strong engineering foundation in relational database
+                      management, analytical programming and automated architectures.
                     </p>
                     <p className="text-lg leading-relaxed">
-                      Currently pursuing advanced studies in AI/ML, I've developed expertise in deep learning, 
-                      computer vision, and natural language processing. I believe in the power of data-driven 
-                      solutions and am committed to creating technology that makes a positive impact on society.
+                      I work on optimizing production-grade machine learning lifecycles, debugging complex
+                      pipelines and building low-latency, full-stack AI applications — from multi-agent systems
+                      and RAG assistants to natural-language analytics platforms.
                     </p>
                     <p className="text-lg leading-relaxed">
-                      My goal is to join a leading technology company where I can contribute to cutting-edge AI 
-                      research and development while continuing to learn from the best minds in the industry.
+                      I'm passionate about applying statistical rigor, data modeling and clean coding
+                      methodologies to real-world operations, and I'm looking for roles where I can keep
+                      shipping AI products that matter.
                     </p>
                   </div>
                   
@@ -429,11 +430,11 @@ const Index = () => {
                           Current Focus
                         </h3>
                         <ul className="space-y-2 text-muted-foreground">
-                          <li>• Advanced Deep Learning Architectures</li>
-                          <li>• Computer Vision & Image Processing</li>
-                          <li>• Natural Language Processing</li>
-                          <li>• MLOps & Model Deployment</li>
-                          <li>• AI Ethics & Responsible AI</li>
+                          <li>• Multi-agent LLM systems (LangGraph)</li>
+                          <li>• Retrieval-Augmented Generation &amp; vector search</li>
+                          <li>• FastAPI backends for real-time inference</li>
+                          <li>• ETL pipelines &amp; relational data modeling</li>
+                          <li>• React + Tailwind analytics dashboards</li>
                         </ul>
                       </CardContent>
                     </Card>
@@ -445,11 +446,11 @@ const Index = () => {
                           When I'm Not Coding
                         </h3>
                         <ul className="space-y-2 text-muted-foreground">
+                          <li>• Solving DSA problems (500+ and counting)</li>
+                          <li>• Competing in hackathons</li>
+                          <li>• Exploring new LLM tooling</li>
                           <li>• Reading AI research papers</li>
-                          <li>• Contributing to open source</li>
-                          <li>• Participating in ML competitions</li>
-                          <li>• Mentoring fellow students</li>
-                          <li>• Exploring new technologies</li>
+                          <li>• Building side projects</li>
                         </ul>
                       </CardContent>
                     </Card>
