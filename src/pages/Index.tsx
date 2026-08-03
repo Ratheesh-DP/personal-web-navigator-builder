@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import heroImage from "@/assets/hero-space.jpg";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -19,11 +20,11 @@ const Index = () => {
   const [currentRole, setCurrentRole] = useState(0);
 
   const roles = [
-    "Machine Learning Engineer",
-    "AI Developer", 
-    "Data Scientist",
+    "Aspiring Data Scientist",
+    "Software Developer",
+    "AI Application Engineer",
     "Python Developer",
-    "Future Tech Innovator"
+    "B.Tech AI & Data Science"
   ];
 
   // Typing animation effect
@@ -46,120 +47,77 @@ const Index = () => {
 
   const skills = [
     { name: "Python", level: 90, category: "Programming", icon: "🐍" },
-    { name: "Machine Learning", level: 85, category: "AI/ML", icon: "🤖" },
-    { name: "TensorFlow", level: 80, category: "Framework", icon: "🧠" },
-    { name: "PyTorch", level: 78, category: "Framework", icon: "🔥" },
-    { name: "Data Science", level: 85, category: "Analytics", icon: "📊" },
-    { name: "Deep Learning", level: 82, category: "AI/ML", icon: "🔬" },
-    { name: "NLP", level: 75, category: "AI/ML", icon: "💬" },
-    { name: "Computer Vision", level: 80, category: "AI/ML", icon: "👁️" },
-    { name: "Django", level: 85, category: "Web Dev", icon: "🌐" },
-    { name: "Flask", level: 88, category: "Web Dev", icon: "⚡" },
-    { name: "NumPy", level: 90, category: "Library", icon: "🔢" },
-    { name: "Pandas", level: 92, category: "Library", icon: "🐼" },
-    { name: "Scikit-learn", level: 88, category: "Library", icon: "📈" },
-    { name: "SQL", level: 85, category: "Database", icon: "🗄️" },
-    { name: "Git", level: 80, category: "Tools", icon: "📝" },
-    { name: "Docker", level: 70, category: "DevOps", icon: "🐳" }
+    { name: "SQL", level: 85, category: "Programming", icon: "🗄️" },
+    { name: "Machine Learning Evaluation", level: 85, category: "AI/ML", icon: "🤖" },
+    { name: "Deep Learning", level: 80, category: "AI/ML", icon: "🔬" },
+    { name: "Reinforcement Learning", level: 70, category: "AI/ML", icon: "🎯" },
+    { name: "Data Imputation & Outliers", level: 82, category: "AI/ML", icon: "📊" },
+    { name: "ETL Processes", level: 80, category: "AI/ML", icon: "🔄" },
+    { name: "TensorFlow", level: 78, category: "Framework", icon: "🧠" },
+    { name: "Scikit-learn", level: 85, category: "Framework", icon: "📈" },
+    { name: "Transformers", level: 78, category: "Framework", icon: "🔤" },
+    { name: "LangChain / LangGraph", level: 82, category: "Framework", icon: "🔗" },
+    { name: "FastAPI", level: 85, category: "Framework", icon: "⚡" },
+    { name: "React JS", level: 80, category: "Framework", icon: "⚛️" },
+    { name: "TailwindCSS", level: 82, category: "Framework", icon: "🎨" },
+    { name: "Pandas", level: 90, category: "Framework", icon: "🐼" },
+    { name: "NumPy", level: 88, category: "Framework", icon: "🔢" },
+    { name: "PostgreSQL", level: 82, category: "Database", icon: "🐘" },
+    { name: "MySQL", level: 80, category: "Database", icon: "💾" },
+    { name: "MongoDB", level: 75, category: "Database", icon: "🍃" },
+    { name: "ChromaDB", level: 78, category: "Database", icon: "🧬" },
+    { name: "FAISS", level: 78, category: "Database", icon: "🔍" },
+    { name: "Git", level: 85, category: "Tools", icon: "📝" },
+    { name: "Docker", level: 72, category: "Tools", icon: "🐳" },
+    { name: "Postman", level: 80, category: "Tools", icon: "📮" },
+    { name: "Google Cloud Platform", level: 70, category: "Tools", icon: "☁️" },
+    { name: "Groq & Gemini LLMs", level: 82, category: "Tools", icon: "✨" }
   ];
 
   const projects = [
     {
-      title: "AI-Powered Recommendation System",
-      description: "Built a sophisticated recommendation engine using collaborative filtering and deep learning, achieving 94% accuracy for user preferences prediction.",
-      tech: ["Python", "TensorFlow", "Pandas", "Flask", "MongoDB"],
-      type: "Machine Learning",
+      title: "Multi-Agent Blog Generator",
+      description: "Multi-agent AI system that automates end-to-end content creation, mimicking a real-world editorial workflow with autonomous Research, Outline, Writer, SEO and Editor agents. Quality guardrails use structured Pydantic validation to review, refine and optimize drafts before output.",
+      tech: ["Python", "LangGraph", "Gemini", "OpenAI", "Pydantic"],
+      type: "Agentic AI",
       status: "Completed",
       demo: "#",
       github: "https://github.com/Ratheesh-DP",
       featured: true,
-      metrics: { users: "10K+", accuracy: "94%", performance: "2x faster" }
+      metrics: { agents: "5", validation: "Pydantic", workflow: "End-to-end" }
     },
     {
-      title: "Computer Vision Object Detection",
-      description: "Developed real-time object detection system using YOLO v8, capable of identifying 80+ objects with 89% mAP accuracy.",
-      tech: ["PyTorch", "OpenCV", "YOLO", "Python", "FastAPI"],
-      type: "Computer Vision", 
-      status: "Completed",
-      demo: "#",
-      github: "https://github.com/Ratheesh-DP",
-      featured: true,
-      metrics: { objects: "80+", accuracy: "89%", fps: "30 FPS" }
-    },
-    {
-      title: "NLP Sentiment Analysis Platform",
-      description: "Created advanced sentiment analysis tool for social media monitoring using BERT and transformer models.",
-      tech: ["BERT", "Transformers", "Python", "Django", "PostgreSQL"],
-      type: "Natural Language Processing",
-      status: "In Progress", 
-      demo: "#",
-      github: "https://github.com/Ratheesh-DP",
-      featured: true,
-      metrics: { languages: "5+", accuracy: "91%", speed: "1000/sec" }
-    },
-    {
-      title: "Predictive Analytics Dashboard",
-      description: "Built interactive dashboard for business intelligence with real-time data visualization and predictive modeling.",
-      tech: ["Python", "Streamlit", "Plotly", "Scikit-learn", "MySQL"],
+      title: "DataCue AI Analytics Platform",
+      description: "AI analytics platform enabling natural language queries over unstructured CSV/Excel data. An asynchronous FastAPI backend integrates Groq and Gemini LLMs for automated, safe SQL generation, surfaced through an interactive React dashboard with Plotly visualizations.",
+      tech: ["React", "FastAPI", "PostgreSQL", "Groq", "Gemini", "Plotly"],
       type: "Data Science",
       status: "Completed",
-      demo: "#", 
+      demo: "#",
       github: "https://github.com/Ratheesh-DP",
-      featured: false,
-      metrics: { accuracy: "87%", queries: "1M+", time: "Real-time" }
+      featured: true,
+      metrics: { input: "CSV/Excel", backend: "Async", queries: "Natural language" }
     },
     {
-      title: "Chatbot with RAG Architecture",
-      description: "Developed intelligent chatbot using Retrieval-Augmented Generation for customer support automation.",
-      tech: ["LangChain", "Vector DB", "OpenAI", "Python", "FastAPI"],
+      title: "Brain Tumor Prediction & AI Assistant",
+      description: "ResNet-50 based brain tumor classification model achieving 90% accuracy on MRI medical data, deployed as a FastAPI web application for real-time inference. A RAG-based medical assistant using tokenization and FAISS vector indices delivers reliable post-diagnosis guidance.",
+      tech: ["Python", "Deep Learning", "ResNet-50", "FastAPI", "FAISS", "Scikit-learn"],
+      type: "Deep Learning",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP",
+      featured: true,
+      metrics: { accuracy: "90%", model: "ResNet-50", assistant: "RAG" }
+    },
+    {
+      title: "Farm Assist",
+      description: "AI-driven assistant delivering real-time crop disease classification and automated pest insights. Multi-modal RAG with ChromaDB + CLIP and Gemini 2.5-flash powers contextual retrieval, served by a FastAPI backend and a React Native app with multilingual voice translation.",
+      tech: ["Python", "Gemini", "ChromaDB", "CLIP", "React Native", "FastAPI"],
       type: "AI/NLP",
       status: "Completed",
       demo: "#",
-      github: "https://github.com/Ratheesh-DP", 
-      featured: false,
-      metrics: { resolution: "85%", response: "< 2s", satisfaction: "4.7/5" }
-    }
-  ];
-
-  const experience = [
-    {
-      role: "Machine Learning Engineer Intern",
-      company: "Tech Innovation Labs",
-      period: "Jun 2024 - Aug 2024",
-      location: "Remote",
-      type: "Internship",
-      description: "Developed and deployed ML models for predictive analytics, contributing to a 25% improvement in model accuracy.",
-      achievements: [
-        "Built recommendation systems using collaborative filtering",
-        "Implemented computer vision models for object detection",
-        "Optimized model performance reducing inference time by 35%"
-      ]
-    },
-    {
-      role: "Python Developer Intern",
-      company: "Digital Solutions Corp",
-      period: "Dec 2023 - May 2024", 
-      location: "Coimbatore, India",
-      type: "Internship",
-      description: "Developed web applications and APIs using Python frameworks, serving 10K+ active users.",
-      achievements: [
-        "Built scalable Flask applications with RESTful APIs",
-        "Implemented data processing pipelines using Pandas",
-        "Created automated testing suites improving code quality"
-      ]
-    },
-    {
-      role: "AI Research Assistant",
-      company: "Sri Shakthi Institute of Engineering",
-      period: "Jan 2024 - Present",
-      location: "Coimbatore, India", 
-      type: "Research",
-      description: "Conducting research on deep learning applications in computer vision and NLP.",
-      achievements: [
-        "Published research on novel CNN architectures",
-        "Developed sentiment analysis models with 92% accuracy",
-        "Mentored junior students in ML projects"
-      ]
+      github: "https://github.com/Ratheesh-DP",
+      featured: true,
+      metrics: { rag: "Multi-modal", platform: "Mobile", languages: "Multilingual" }
     }
   ];
 
@@ -168,29 +126,24 @@ const Index = () => {
       degree: "B.Tech in Artificial Intelligence and Data Science",
       institution: "Sri Shakthi Institute of Engineering and Technology",
       period: "2023 - 2027",
-      gpa: "8.5/10",
-      status: "3rd Year Student",
+      gpa: "8.33 / 10.0",
+      status: "Currently pursuing",
       coursework: [
         "Machine Learning & Deep Learning",
-        "Computer Vision & Image Processing", 
+        "Relational Database Management",
         "Natural Language Processing",
         "Data Structures & Algorithms",
         "Statistics & Probability Theory",
-        "Database Management Systems",
-        "Software Engineering & Design Patterns",
-        "Neural Networks & AI Ethics"
-      ],
-      projects: [
-        "Final Year Project: Advanced Computer Vision System",
-        "Research: Deep Learning for Medical Image Analysis",
-        "Capstone: AI-Powered Smart Agriculture System"
+        "Reinforcement Learning",
+        "ETL & Data Modeling",
+        "Software Engineering"
       ]
     },
     {
       degree: "Higher Secondary Education (XII)",
-      institution: "Government Higher Secondary School",
-      period: "2021 - 2023",
-      gpa: "92%",
+      institution: "Vidyaa Vikas Matric Higher Secondary School",
+      period: "2022 - 2023",
+      gpa: "76.17%",
       status: "Completed",
       coursework: [
         "Mathematics",
@@ -203,54 +156,61 @@ const Index = () => {
 
   const achievements = [
     {
-      title: "Smart India Hackathon Finalist",
-      organization: "Government of India",
-      date: "2024",
-      description: "Selected among top 10 teams nationwide for AI-based solution",
+      title: "Amazon ML Summer School",
+      organization: "Amazon",
+      date: "Selected",
+      description: "Selected among the top 3,000 students nationwide for the competitive advanced machine learning cohort",
       icon: "🏆"
     },
     {
-      title: "Python Programming Certification", 
-      organization: "HackerRank",
-      date: "2024",
-      description: "5-star rating in Python with top 5% performance",
-      icon: "🎓"
-    },
-    {
-      title: "Machine Learning Specialization",
-      organization: "Coursera (Stanford)",
-      date: "2024", 
-      description: "Completed Andrew Ng's ML course with 98% score",
-      icon: "📄"
-    },
-    {
-      title: "College Technical Symposium Winner",
-      organization: "Sri Shakthi Institute",
-      date: "2024",
-      description: "1st place in AI/ML project competition",
+      title: "Horizon 25 Hackathon Finalist",
+      organization: "Horizon 25",
+      date: "Finalist",
+      description: "Finalist with an AI Agrotech application",
       icon: "🚀"
     },
     {
-      title: "Open Source Contributor",
-      organization: "GitHub",
-      date: "2023-Present",
-      description: "Contributing to ML libraries and frameworks",
-      icon: "💻"
+      title: "Google GenAI Exchange & ISRO Hackathon",
+      organization: "Google / ISRO",
+      date: "Participant",
+      description: "Participated in the Google GenAI Exchange and ISRO hackathons",
+      icon: "🛰️"
     },
     {
-      title: "Dean's List Recognition",
-      organization: "Sri Shakthi Institute",
-      date: "2023-2024",
-      description: "Academic excellence recognition for consecutive semesters",
-      icon: "⭐"
+      title: "500+ DSA Problems Solved",
+      organization: "LeetCode & competitive platforms",
+      date: "Ongoing",
+      description: "Solved 500+ Data Structures & Algorithms problems across competitive platforms",
+      icon: "🧩"
+    },
+    {
+      title: "Introduction to Generative AI",
+      organization: "Coursera / Google Cloud",
+      date: "Certification",
+      description: "Certified in the fundamentals of generative AI",
+      icon: "🎓"
+    },
+    {
+      title: "Artificial Intelligence Primer",
+      organization: "Infosys Springboard",
+      date: "Certification",
+      description: "Artificial Intelligence Primer Certification",
+      icon: "📄"
+    },
+    {
+      title: "Introduction to Git",
+      organization: "DataCamp",
+      date: "Certification",
+      description: "Certified in version control fundamentals with Git",
+      icon: "🌿"
     }
   ];
 
   const stats = [
-    { label: "Projects Completed", value: "15+", icon: "📈" },
-    { label: "Lines of Code", value: "50K+", icon: "💻" },
-    { label: "Models Trained", value: "30+", icon: "🤖" },
-    { label: "Problems Solved", value: "500+", icon: "🧩" }
+    { label: "DSA Problems Solved", value: "500+", icon: "🧩" },
+    { label: "Major AI Projects", value: "4", icon: "📈" },
+    { label: "CGPA", value: "8.33", icon: "🎓" },
+    { label: "Model Accuracy", value: "90%", icon: "🤖" }
   ];
 
   const navigationSections = [
@@ -258,7 +218,6 @@ const Index = () => {
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
-    { id: "experience", label: "Experience" },
     { id: "education", label: "Education" },
     { id: "achievements", label: "Achievements" },
     { id: "contact", label: "Contact" }
