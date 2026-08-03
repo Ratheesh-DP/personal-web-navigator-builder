@@ -324,7 +324,7 @@ const Index = () => {
 
               {/* Category line */}
               <p className="text-sm md:text-base font-mono text-primary tracking-widest mb-6 uppercase">
-                Machine Learning <span className="text-muted-foreground">/</span> Deep Learning <span className="text-muted-foreground">/</span> Data Science
+                Data Science <span className="text-muted-foreground">/</span> Machine Learning <span className="text-muted-foreground">/</span> Full-Stack AI
               </p>
 
               {/* Massive name */}
@@ -342,8 +342,8 @@ const Index = () => {
               </div>
 
               <p className="text-lg md:text-xl text-foreground/80 mb-10 max-w-2xl leading-relaxed">
-                I build intelligent systems with the discipline of a machine learning engineer
-                and the curiosity of a data scientist — turning complex data into real-world impact.
+                Aspiring Data Scientist and Software Developer from Coimbatore, building low-latency,
+                full-stack AI applications with statistical rigor, clean data modeling and production-grade ML pipelines.
               </p>
 
               {/* CTAs */}
@@ -352,9 +352,11 @@ const Index = () => {
                   View Projects
                   <Rocket className="w-4 h-4 ml-2" />
                 </Button>
-                <Button variant="outline" size="lg" className="rounded-full px-8 bg-background/50 backdrop-blur-sm">
-                  <Download className="w-4 h-4 mr-2" />
-                  Resume
+                <Button variant="outline" size="lg" className="rounded-full px-8 bg-background/50 backdrop-blur-sm" asChild>
+                  <a href={resumeAsset.url} download="Ratheesh_D_P_Resume.pdf">
+                    <Download className="w-4 h-4 mr-2" />
+                    Resume
+                  </a>
                 </Button>
                 <Button variant="outline" size="lg" className="rounded-full px-8 bg-background/50 backdrop-blur-sm" asChild>
                   <a href="https://github.com/Ratheesh-DP" target="_blank" rel="noopener noreferrer">
@@ -366,8 +368,8 @@ const Index = () => {
 
               {/* Hidden legacy content preserved semantically */}
               <p className="sr-only">
-                Building the future with AI and Machine Learning. Passionate about creating intelligent solutions 
-                that solve real-world problems and drive innovation in technology.
+                Ratheesh D P — B.Tech Artificial Intelligence and Data Science student at Sri Shakthi Institute of
+                Engineering and Technology, Coimbatore, building AI and data-driven applications.
               </p>
 
               {/* Stats strip */}
