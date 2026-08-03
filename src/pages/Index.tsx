@@ -750,9 +750,9 @@ const Index = () => {
                       <div>
                         <h3 className="text-2xl font-semibold mb-4">Get In Touch</h3>
                         <p className="text-muted-foreground leading-relaxed mb-6">
-                          I'm actively seeking opportunities to work on cutting-edge AI/ML projects at leading 
-                          technology companies. Whether it's a full-time role, internship, or collaboration, 
-                          I'm excited to discuss how I can contribute to your team's success.
+                          I'm actively seeking data science, machine learning and software development
+                          opportunities. Whether it's a full-time role, an internship or a collaboration,
+                          I'd be glad to talk about how I can contribute.
                         </p>
                         
                         <div className="space-y-4">
@@ -761,10 +761,10 @@ const Index = () => {
                             <div>
                               <p className="font-medium">Email</p>
                               <a 
-                                href="mailto:d.p.ratheesh007@gmail.com"
+                                href="mailto:dpratheesh154@gmail.com"
                                 className="text-muted-foreground hover:text-primary transition-colors"
                               >
-                                d.p.ratheesh007@gmail.com
+                                dpratheesh154@gmail.com
                               </a>
                             </div>
                           </div>
@@ -773,7 +773,9 @@ const Index = () => {
                             <Phone className="w-6 h-6 text-primary mr-4" />
                             <div>
                               <p className="font-medium">Phone</p>
-                              <p className="text-muted-foreground">Available upon request</p>
+                              <a href="tel:+916383053651" className="text-muted-foreground hover:text-primary transition-colors">
+                                +91 63830 53651
+                              </a>
                             </div>
                           </div>
                           
@@ -781,7 +783,7 @@ const Index = () => {
                             <MapPin className="w-6 h-6 text-primary mr-4" />
                             <div>
                               <p className="font-medium">Location</p>
-                              <p className="text-muted-foreground">India (Open to relocation)</p>
+                              <p className="text-muted-foreground">Coimbatore, Tamil Nadu, India</p>
                             </div>
                           </div>
                         </div>
@@ -830,23 +832,29 @@ const Index = () => {
                           
                           <Card className="border-border hover:border-primary/50 transition-colors cursor-pointer">
                             <CardContent className="p-6">
-                              <div className="flex items-center space-x-4">
+                              <a
+                                href={resumeAsset.url}
+                                download="Ratheesh_D_P_Resume.pdf"
+                                className="flex items-center space-x-4"
+                              >
                                 <Download className="w-8 h-8 text-primary" />
                                 <div>
                                   <p className="font-semibold">Resume</p>
                                   <p className="text-muted-foreground text-sm">Download my latest resume</p>
                                 </div>
                                 <ExternalLink className="w-4 h-4 text-muted-foreground ml-auto" />
-                              </div>
+                              </a>
                             </CardContent>
                           </Card>
                         </div>
                       </div>
                       
                       <div className="text-center">
-                        <Button size="lg" className="bg-gradient-cosmic hover:opacity-90 transition-opacity">
-                          <Mail className="w-5 h-5 mr-2" />
-                          Start a Conversation
+                        <Button size="lg" className="bg-gradient-cosmic hover:opacity-90 transition-opacity" asChild>
+                          <a href="mailto:dpratheesh154@gmail.com">
+                            <Mail className="w-5 h-5 mr-2" />
+                            Start a Conversation
+                          </a>
                         </Button>
                       </div>
                     </div>
@@ -863,7 +871,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <p className="text-muted-foreground mb-4">
-              &copy; 2024 Ratheesh D P. Building the future with AI.
+              &copy; {new Date().getFullYear()} Ratheesh D P. Building the future with AI.
             </p>
             <div className="flex justify-center space-x-6">
               <a 
@@ -883,7 +891,7 @@ const Index = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a 
-                href="mailto:d.p.ratheesh007@gmail.com"
+                href="mailto:dpratheesh154@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-5 h-5" />
