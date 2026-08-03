@@ -638,60 +638,6 @@ const Index = () => {
           </section>
         )}
 
-        {/* Experience Section */}
-        {activeSection === "experience" && (
-          <section className="mb-16">
-            <Card className="border-primary/20">
-              <CardHeader className="text-center">
-                <CardTitle className="text-4xl mb-4">Professional Experience</CardTitle>
-                <p className="text-xl text-muted-foreground">
-                  Building expertise through hands-on projects and internships
-                </p>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-8">
-                  {experience.map((exp, index) => (
-                    <Card key={index} className="border-border">
-                      <CardContent className="p-6">
-                        <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                          <div>
-                            <h3 className="text-xl font-semibold mb-1">{exp.role}</h3>
-                            <p className="text-lg text-primary font-medium mb-2">{exp.company}</p>
-                            <p className="text-muted-foreground mb-2">{exp.description}</p>
-                          </div>
-                          <div className="text-right">
-                            <Badge variant="outline" className="mb-2">{exp.type}</Badge>
-                            <p className="text-sm text-muted-foreground flex items-center">
-                              <Calendar className="w-4 h-4 mr-1" />
-                              {exp.period}
-                            </p>
-                            <p className="text-sm text-muted-foreground flex items-center mt-1">
-                              <MapPin className="w-4 h-4 mr-1" />
-                              {exp.location}
-                            </p>
-                          </div>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-semibold mb-3">Key Achievements:</h4>
-                          <ul className="space-y-2">
-                            {exp.achievements.map((achievement, achievementIndex) => (
-                              <li key={achievementIndex} className="flex items-start">
-                                <TrendingUp className="w-4 h-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                                <span className="text-muted-foreground">{achievement}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </section>
-        )}
-
         {/* Education Section */}
         {activeSection === "education" && (
           <section className="mb-16">
