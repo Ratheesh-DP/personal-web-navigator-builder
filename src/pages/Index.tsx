@@ -74,7 +74,19 @@ const Index = () => {
     { name: "Groq & Gemini LLMs", level: 82, category: "Tools", icon: "✨" }
   ];
 
-  const projects = [
+  type Project = {
+    title: string;
+    description: string;
+    tech: string[];
+    type: string;
+    status: string;
+    demo: string;
+    github: string;
+    featured?: boolean;
+    metrics?: Record<string, string>;
+  };
+
+  const projects: Project[] = [
     {
       title: "Multi-Agent Blog Generator",
       description: "Multi-agent AI system that automates end-to-end content creation, mimicking a real-world editorial workflow with autonomous Research, Outline, Writer, SEO and Editor agents. Quality guardrails use structured Pydantic validation to review, refine and optimize drafts before output.",
@@ -118,8 +130,339 @@ const Index = () => {
       github: "https://github.com/Ratheesh-DP",
       featured: true,
       metrics: { rag: "Multi-modal", platform: "Mobile", languages: "Multilingual" }
+    },
+
+    /* ---------- Agentic AI & LLM Apps ---------- */
+    {
+      title: "SynthFlow Builder",
+      description: "Visual workflow builder for composing and orchestrating multi-step AI pipelines with reusable nodes.",
+      tech: ["TypeScript", "React", "LLM Orchestration"],
+      type: "Agentic AI",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/synthflow-builder"
+    },
+    {
+      title: "AI Companion",
+      description: "Conversational AI companion with persistent memory and context-aware, persona-driven responses.",
+      tech: ["TypeScript", "React", "LLM"],
+      type: "Agentic AI",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/ai-companion"
+    },
+    {
+      title: "AI Explorer Suite",
+      description: "A suite of experimental AI tools for prompting, comparing models and exploring generative capabilities.",
+      tech: ["TypeScript", "React", "Multi-model"],
+      type: "Agentic AI",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/ai-explorer-suite"
+    },
+    {
+      title: "Elastic Vector RAG",
+      description: "Retrieval-augmented generation pipeline backed by Elasticsearch vector search for grounded answers over private documents.",
+      tech: ["Python", "Elasticsearch", "RAG", "Embeddings"],
+      type: "Agentic AI",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/elastic-vector-rag-"
+    },
+
+    /* ---------- Computer Vision & Deep Learning ---------- */
+    {
+      title: "VisionRec System",
+      description: "Face and object recognition system built on classical CV plus deep feature embeddings for real-time detection.",
+      tech: ["Python", "OpenCV", "Deep Learning"],
+      type: "Computer Vision",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/VisionRec-system"
+    },
+    {
+      title: "Leaf Health Guardian",
+      description: "Plant leaf disease detection app that classifies crop illnesses from images and recommends treatment steps.",
+      tech: ["TypeScript", "CNN", "Image Classification"],
+      type: "Computer Vision",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/leaf-health-guardian"
+    },
+    {
+      title: "Thron OCR Hub",
+      description: "Document OCR workspace for extracting, structuring and exporting text from scanned files and images.",
+      tech: ["TypeScript", "OCR", "Document AI"],
+      type: "Computer Vision",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/thron-ocr-hub"
+    },
+    {
+      title: "Shop Lens AI",
+      description: "Visual shopping assistant that identifies products from photos and surfaces matching recommendations.",
+      tech: ["TypeScript", "Vision LLM", "React"],
+      type: "Computer Vision",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/shop-lens-ai"
+    },
+    {
+      title: "PaperBanana Studio",
+      description: "Creative image generation and editing studio built around modern multimodal image models.",
+      tech: ["TypeScript", "Image Generation", "React"],
+      type: "Computer Vision",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/paperbanana-studio"
+    },
+
+    /* ---------- Healthcare AI ---------- */
+    {
+      title: "Deep Med Fusion",
+      description: "Multi-modal medical AI that fuses imaging and clinical signals for richer diagnostic support.",
+      tech: ["TypeScript", "Deep Learning", "Multi-modal"],
+      type: "Healthcare AI",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/deep-med-fusion"
+    },
+    {
+      title: "Care Scan",
+      description: "Medical scan triage interface that walks patients through AI-assisted report interpretation.",
+      tech: ["TypeScript", "React", "Medical AI"],
+      type: "Healthcare AI",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/care-scan"
+    },
+    {
+      title: "Insightful Health AI",
+      description: "Personal health analytics dashboard converting records and metrics into plain-language insights.",
+      tech: ["TypeScript", "Analytics", "LLM"],
+      type: "Healthcare AI",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/insightful-health-ai"
+    },
+
+    /* ---------- Data Science & Analytics ---------- */
+    {
+      title: "Data Analysis Streamlit App",
+      description: "Interactive Streamlit workspace for EDA: profiling, cleaning, visualisation and quick statistical summaries.",
+      tech: ["Python", "Streamlit", "Pandas", "Plotly"],
+      type: "Data Science",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/data-analysis-streamlit-app"
+    },
+    {
+      title: "Habitable Planet Hunter",
+      description: "ML classifier that predicts planetary habitability from astronomical feature sets.",
+      tech: ["Python", "Scikit-learn", "Classification"],
+      type: "Data Science",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/habitable-planet-hunter"
+    },
+    {
+      title: "Insight Compass",
+      description: "Business intelligence explorer that turns raw datasets into guided, chart-driven narratives.",
+      tech: ["TypeScript", "Data Viz", "React"],
+      type: "Data Science",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/insight-compass"
+    },
+    {
+      title: "Convolve — Document Extraction",
+      description: "Production-ready document extraction pipeline with lightweight, VLM and hybrid strategies balancing cost, latency and accuracy.",
+      tech: ["Python", "VLM", "OCR", "PDF Processing"],
+      type: "Data Science",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/convolve"
+    },
+
+    /* ---------- FinTech ---------- */
+    {
+      title: "SmartSpend Wealth Builder",
+      description: "Personal finance tracker with spending categorisation and AI-generated savings recommendations.",
+      tech: ["TypeScript", "React", "Analytics"],
+      type: "FinTech",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/smartspend-wealth-builder"
+    },
+    {
+      title: "Otto — AI Wealth Guide",
+      description: "Conversational wealth advisor offering goal planning and portfolio guidance through an LLM interface.",
+      tech: ["TypeScript", "LLM", "React"],
+      type: "FinTech",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/otto-your-ai-wealth-guide"
+    },
+    {
+      title: "Wealth Navigator",
+      description: "Investment planning dashboard with scenario modelling and long-term growth projections.",
+      tech: ["TypeScript", "React", "Charts"],
+      type: "FinTech",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/wealth-navigator"
+    },
+
+    /* ---------- Security ---------- */
+    {
+      title: "Security Toolkit",
+      description: "Collection of practical security utilities for hashing, scanning and vulnerability awareness.",
+      tech: ["TypeScript", "Security", "Web Crypto"],
+      type: "Security",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/security-toolkit"
+    },
+    {
+      title: "Secure Labs",
+      description: "Hands-on lab environment for exploring common web vulnerabilities and their mitigations.",
+      tech: ["TypeScript", "AppSec", "React"],
+      type: "Security",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/secure-labs"
+    },
+    {
+      title: "Crypto Art Compliance",
+      description: "Compliance checker for digital art assets, validating provenance and regulatory requirements.",
+      tech: ["TypeScript", "Web3", "Compliance"],
+      type: "Security",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/crypto-art-compliance"
+    },
+    {
+      title: "Safe Haven Helper",
+      description: "Emergency assistance platform connecting people to nearby safe shelters and support resources.",
+      tech: ["TypeScript", "React", "Geolocation"],
+      type: "Security",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/safe-haven-helper"
+    },
+
+    /* ---------- Web & Full-Stack ---------- */
+    {
+      title: "Smart Wanderlust AI Trips",
+      description: "AI travel planner generating personalised itineraries with budgets, routes and local recommendations.",
+      tech: ["TypeScript", "React", "LLM"],
+      type: "Web & Full-Stack",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/smart-wanderlust-ai-trips"
+    },
+    {
+      title: "The FlashChat",
+      description: "Realtime messaging app with instant delivery, presence and a clean responsive interface.",
+      tech: ["TypeScript", "React", "Realtime"],
+      type: "Web & Full-Stack",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/the-flashchat"
+    },
+    {
+      title: "Smart Campus Management System",
+      description: "Campus operations platform handling attendance, scheduling and student records end to end.",
+      tech: ["Python", "Database", "Full-Stack"],
+      type: "Web & Full-Stack",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/Smart-Campus-Management-System"
+    },
+    {
+      title: "Smart Study AI",
+      description: "Study assistant that summarises materials, generates quizzes and tracks learning progress.",
+      tech: ["Python", "LLM", "EdTech"],
+      type: "Web & Full-Stack",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/smart-study-ai-"
+    },
+    {
+      title: "Skill Scout AI",
+      description: "Career tool that maps résumés against job descriptions and highlights actionable skill gaps.",
+      tech: ["TypeScript", "NLP", "React"],
+      type: "Web & Full-Stack",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/skill-scout-ai"
+    },
+    {
+      title: "Code Connect Hub",
+      description: "Community hub for developers to share snippets, collaborate and discover projects.",
+      tech: ["TypeScript", "React", "Community"],
+      type: "Web & Full-Stack",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/code-connect-hub"
+    },
+    {
+      title: "Citizen Connect",
+      description: "Civic engagement portal for reporting local issues and tracking resolution transparently.",
+      tech: ["TypeScript", "React", "Civic Tech"],
+      type: "Web & Full-Stack",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/citizen-connect"
+    },
+    {
+      title: "EV Harmony Hub",
+      description: "EV charging companion for locating stations, planning routes and monitoring charging sessions.",
+      tech: ["TypeScript", "React", "Maps"],
+      type: "Web & Full-Stack",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/ev-harmony-hub"
+    },
+    {
+      title: "Code Buddy Arena",
+      description: "Competitive coding arena with practice challenges, matchmaking and progress tracking.",
+      tech: ["TypeScript", "React", "DSA"],
+      type: "Web & Full-Stack",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/code-buddy-arena"
+    },
+    {
+      title: "Form Buddy",
+      description: "Dynamic form builder with validation, conditional logic and shareable submissions.",
+      tech: ["TypeScript", "React", "Forms"],
+      type: "Web & Full-Stack",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/form-buddy"
+    },
+    {
+      title: "Future Builders Hub",
+      description: "Learning and mentorship platform connecting students with builders and project opportunities.",
+      tech: ["TypeScript", "React", "EdTech"],
+      type: "Web & Full-Stack",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/future-builders-hub"
+    },
+    {
+      title: "Workout Jobs",
+      description: "Fitness scheduling app pairing workout plans with routine tracking and reminders.",
+      tech: ["TypeScript", "React", "Health"],
+      type: "Web & Full-Stack",
+      status: "Completed",
+      demo: "#",
+      github: "https://github.com/Ratheesh-DP/workout-jobs"
     }
   ];
+
+  const projectCategories = Array.from(new Set(projects.map((p) => p.type)));
 
   const education = [
     {
@@ -208,7 +551,7 @@ const Index = () => {
 
   const stats = [
     { label: "DSA Problems Solved", value: "500+", icon: "🧩" },
-    { label: "Major AI Projects", value: "4", icon: "📈" },
+    { label: "Projects Built", value: `${projects.length}+`, icon: "📈" },
     { label: "CGPA", value: "8.33", icon: "🎓" },
     { label: "Model Accuracy", value: "90%", icon: "🤖" }
   ];
@@ -529,11 +872,14 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <Tabs defaultValue="featured" className="w-full">
-                  <TabsList className="grid w-full grid-cols-4">
+                  <TabsList className="flex flex-wrap h-auto w-full justify-start gap-1">
                     <TabsTrigger value="featured">Featured</TabsTrigger>
-                    <TabsTrigger value="ml">Machine Learning</TabsTrigger>
-                    <TabsTrigger value="ai">AI/NLP</TabsTrigger>
-                    <TabsTrigger value="all">All Projects</TabsTrigger>
+                    {projectCategories.map((category) => (
+                      <TabsTrigger key={category} value={category}>
+                        {category}
+                      </TabsTrigger>
+                    ))}
+                    <TabsTrigger value="all">All ({projects.length})</TabsTrigger>
                   </TabsList>
                   
                   <TabsContent value="featured" className="mt-6">
@@ -564,14 +910,16 @@ const Index = () => {
                               ))}
                             </div>
                             
-                            <div className="grid grid-cols-3 gap-4 p-4 bg-muted rounded-lg">
-                              {Object.entries(project.metrics).map(([key, value]) => (
-                                <div key={key} className="text-center">
-                                  <div className="font-semibold text-primary">{value}</div>
-                                  <div className="text-xs text-muted-foreground capitalize">{key}</div>
-                                </div>
-                              ))}
-                            </div>
+                            {project.metrics && (
+                              <div className="grid grid-cols-3 gap-4 p-4 bg-muted rounded-lg">
+                                {Object.entries(project.metrics).map(([key, value]) => (
+                                  <div key={key} className="text-center">
+                                    <div className="font-semibold text-primary">{value}</div>
+                                    <div className="text-xs text-muted-foreground capitalize">{key}</div>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
                             
                             <div className="flex gap-3">
                               <Button variant="outline" size="sm" asChild>
@@ -593,7 +941,39 @@ const Index = () => {
                     </div>
                   </TabsContent>
                   
-                  {/* Other project tabs would be similar */}
+                  {projectCategories.map((category) => (
+                    <TabsContent key={category} value={category} className="mt-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {projects
+                          .filter((p) => p.type === category)
+                          .map((project, index) => (
+                            <Card key={index} className="border-border hover:border-primary/50 transition-colors flex flex-col">
+                              <CardHeader>
+                                <CardTitle className="text-lg">{project.title}</CardTitle>
+                                <Badge variant="outline" className="w-fit">{project.type}</Badge>
+                              </CardHeader>
+                              <CardContent className="space-y-4 flex flex-col flex-1">
+                                <p className="text-sm text-muted-foreground flex-1">{project.description}</p>
+                                <div className="flex flex-wrap gap-1">
+                                  {project.tech.map((tech, techIndex) => (
+                                    <Badge key={techIndex} variant="outline" className="text-xs">
+                                      {tech}
+                                    </Badge>
+                                  ))}
+                                </div>
+                                <Button variant="outline" size="sm" className="w-full" asChild>
+                                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                                    <Github className="w-4 h-4 mr-2" />
+                                    Source Code
+                                  </a>
+                                </Button>
+                              </CardContent>
+                            </Card>
+                          ))}
+                      </div>
+                    </TabsContent>
+                  ))}
+
                   <TabsContent value="all" className="mt-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {projects.map((project, index) => (
@@ -618,18 +998,12 @@ const Index = () => {
                                 </Badge>
                               )}
                             </div>
-                            <div className="flex gap-2">
-                              <Button variant="outline" size="sm" className="flex-1" asChild>
-                                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                                  <Github className="w-4 h-4" />
-                                </a>
-                              </Button>
-                              <Button variant="outline" size="sm" className="flex-1" asChild>
-                                <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                                  <ExternalLink className="w-4 h-4" />
-                                </a>
-                              </Button>
-                            </div>
+                            <Button variant="outline" size="sm" className="w-full" asChild>
+                              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                                <Github className="w-4 h-4 mr-2" />
+                                Source Code
+                              </a>
+                            </Button>
                           </CardContent>
                         </Card>
                       ))}
