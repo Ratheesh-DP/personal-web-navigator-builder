@@ -872,11 +872,14 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <Tabs defaultValue="featured" className="w-full">
-                  <TabsList className="grid w-full grid-cols-4">
+                  <TabsList className="flex flex-wrap h-auto w-full justify-start gap-1">
                     <TabsTrigger value="featured">Featured</TabsTrigger>
-                    <TabsTrigger value="ml">Machine Learning</TabsTrigger>
-                    <TabsTrigger value="ai">AI/NLP</TabsTrigger>
-                    <TabsTrigger value="all">All Projects</TabsTrigger>
+                    {projectCategories.map((category) => (
+                      <TabsTrigger key={category} value={category}>
+                        {category}
+                      </TabsTrigger>
+                    ))}
+                    <TabsTrigger value="all">All ({projects.length})</TabsTrigger>
                   </TabsList>
                   
                   <TabsContent value="featured" className="mt-6">
@@ -907,14 +910,16 @@ const Index = () => {
                               ))}
                             </div>
                             
-                            <div className="grid grid-cols-3 gap-4 p-4 bg-muted rounded-lg">
-                              {Object.entries(project.metrics).map(([key, value]) => (
-                                <div key={key} className="text-center">
-                                  <div className="font-semibold text-primary">{value}</div>
-                                  <div className="text-xs text-muted-foreground capitalize">{key}</div>
-                                </div>
-                              ))}
-                            </div>
+                            {project.metrics && (
+                              <div className="grid grid-cols-3 gap-4 p-4 bg-muted rounded-lg">
+                                {Object.entries(project.metrics).map(([key, value]) => (
+                                  <div key={key} className="text-center">
+                                    <div className="font-semibold text-primary">{value}</div>
+                                    <div className="text-xs text-muted-foreground capitalize">{key}</div>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
                             
                             <div className="flex gap-3">
                               <Button variant="outline" size="sm" asChild>
@@ -936,7 +941,39 @@ const Index = () => {
                     </div>
                   </TabsContent>
                   
-                  {/* Other project tabs would be similar */}
+                  {projectCategories.map((category) => (
+                    <TabsContent key={category} value={category} className="mt-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {projects
+                          .filter((p) => p.type === category)
+                          .map((project, index) => (
+                            <Card key={index} className="border-border hover:border-primary/50 transition-colors flex flex-col">
+                              <CardHeader>
+                                <CardTitle className="text-lg">{project.title}</CardTitle>
+                                <Badge variant="outline" className="w-fit">{project.type}</Badge>
+                              </CardHeader>
+                              <CardContent className="space-y-4 flex flex-col flex-1">
+                                <p className="text-sm text-muted-foreground flex-1">{project.description}</p>
+                                <div className="flex flex-wrap gap-1">
+                                  {project.tech.map((tech, techIndex) => (
+                                    <Badge key={techIndex} variant="outline" className="text-xs">
+                                      {tech}
+                                    </Badge>
+                                  ))}
+                                </div>
+                                <Button variant="outline" size="sm" className="w-full" asChild>
+                                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                                    <Github className="w-4 h-4 mr-2" />
+                                    Source Code
+                                  </a>
+                                </Button>
+                              </CardContent>
+                            </Card>
+                          ))}
+                      </div>
+                    </TabsContent>
+                  ))}
+
                   <TabsContent value="all" className="mt-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {projects.map((project, index) => (
@@ -961,18 +998,12 @@ const Index = () => {
                                 </Badge>
                               )}
                             </div>
-                            <div className="flex gap-2">
-                              <Button variant="outline" size="sm" className="flex-1" asChild>
-                                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                                  <Github className="w-4 h-4" />
-                                </a>
-                              </Button>
-                              <Button variant="outline" size="sm" className="flex-1" asChild>
-                                <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                                  <ExternalLink className="w-4 h-4" />
-                                </a>
-                              </Button>
-                            </div>
+                            <Button variant="outline" size="sm" className="w-full" asChild>
+                              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                                <Github className="w-4 h-4 mr-2" />
+                                Source Code
+                              </a>
+                            </Button>
                           </CardContent>
                         </Card>
                       ))}
