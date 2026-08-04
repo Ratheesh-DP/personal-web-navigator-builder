@@ -551,7 +551,7 @@ const Index = () => {
 
   const stats = [
     { label: "DSA Problems Solved", value: "500+", icon: "🧩" },
-    { label: "Major AI Projects", value: "4", icon: "📈" },
+    { label: "Projects Built", value: `${projects.length}+`, icon: "📈" },
     { label: "CGPA", value: "8.33", icon: "🎓" },
     { label: "Model Accuracy", value: "90%", icon: "🤖" }
   ];
